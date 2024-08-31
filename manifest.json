@@ -3,14 +3,11 @@
   "name": "Auto Scroll and Reload",
   "version": "1.0",
   "description": "Automatically scrolls down a webpage and reloads when it reaches the bottom.",
-  "permissions": ["activeTab", "scripting"],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ],
+  "permissions": ["scripting"],
   "action": {
     "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
   }
 }
